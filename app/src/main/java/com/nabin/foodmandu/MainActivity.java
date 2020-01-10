@@ -30,37 +30,36 @@ public class MainActivity extends AppCompatActivity {
         tvSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Successfull", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, register_activity.class);
+                Toast.makeText(getApplicationContext(), "You can register here", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this, register_activity.class);
                 startActivity(intent);
+
             }
         });
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            @Override public void onClick(View view) {
                 login();
-
             }
         });
+
     }
     private void login(){
-        String username = etUsername.getText().toString();
-        String password = etPassword.getText().toString();
+        String username=etUsername.getText().toString();
+        String password=etPassword.getText().toString();
 
-        LoginBll loginBll = new LoginBll();
+        LoginBll loginBLL=new LoginBll();
 
         strictmodeclass.StrictMode();
-        if (loginBll.checkUser(username, password)) {
-            Intent intent = new Intent(MainActivity.this, Dashboard_activity.class);
+        if (loginBLL.checkUser(username, password)) {
+//            Toast.makeText(getApplicationContext(), "Welcome to dashboard", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, DashBoard_activity.class);
             startActivity(intent);
             finish();
+            Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "UserName or Password is incorrect", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Either username or password is incorrect", Toast.LENGTH_SHORT).show();
             etUsername.requestFocus();
         }
 
-
     }
-
 }
