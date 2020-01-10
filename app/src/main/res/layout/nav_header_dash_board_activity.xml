@@ -31,6 +31,6 @@
         android:id="@+id/textView"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:text="Nimesh Paudel" />
+        android:text="Nabin Thakurathi" />
 
 </LinearLayout>

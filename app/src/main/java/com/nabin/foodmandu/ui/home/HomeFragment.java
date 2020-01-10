@@ -70,12 +70,12 @@ public class HomeFragment extends Fragment {
 
 
         SuperRecyclerView=view.findViewById(R.id.recyclerSuper);
-        SuperViewModel superViewModel=new SuperViewModel(R.drawable.basket,"Nabin 3* Hotel","pizza","BudhaNagar",R.drawable.one);
-        superList.add(new SuperViewModel(R.drawable.coke,"Devil Cafe","Coffee","Koteshwor",R.drawable.two));
-        superList.add(new SuperViewModel(R.drawable.pizza,"Lal Lounge","Burger","Kalanki",R.drawable.three));
-        superList.add(new SuperViewModel(R.drawable.momo,"Devil Lal Restro","MO:MO","Baneshwor",R.drawable.four));
-        superList.add(new SuperViewModel(R.drawable.coke,"Daari Vai ko resturent","Chiken Chilli","Bhaktapur",R.drawable.five));
-        superList.add(new SuperViewModel(R.drawable.pizza,"Oyo Hotel","Pizza","Hariyopul",R.drawable.ic_menu_camera));
+        SuperViewModel superViewModel=new SuperViewModel(R.drawable.basket,"Nabin 3* Hotel","pizza","BudhaNagar",R.drawable.onee);
+        superList.add(new SuperViewModel(R.drawable.f,"Devil Cafe","Coffee","Koteshwor",R.drawable.onee));
+        superList.add(new SuperViewModel(R.drawable.f1,"Lal Lounge","Burger","Kalanki",R.drawable.two));
+        superList.add(new SuperViewModel(R.drawable.f2,"Devil Lal Restro","MO:MO","Baneshwor",R.drawable.three));
+        superList.add(new SuperViewModel(R.drawable.f,"Daari Vai ko resturent","Chiken Chilli","Bhaktapur",R.drawable.four));
+        superList.add(new SuperViewModel(R.drawable.f1,"Oyo Hotel","Pizza","Hariyopul",R.drawable.ic_menu_camera));
         SuperAdapter superAdapter=new SuperAdapter(getActivity(),superList);
         SuperRecyclerView.setAdapter(superAdapter);
         SuperRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));

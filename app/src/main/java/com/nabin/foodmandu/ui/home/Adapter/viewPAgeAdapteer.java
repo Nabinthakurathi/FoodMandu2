@@ -15,7 +15,7 @@ import com.nabin.foodmandu.R;
 public class viewPAgeAdapteer extends PagerAdapter {
     private Context context;
     private android.view.LayoutInflater layoutInflater;
-    private Integer[] images = {R.drawable.coke, R.drawable.momo, R.drawable.pizza, R.drawable.coke};
+    private Integer[] images = {R.drawable.f1, R.drawable.f, R.drawable.f2, R.drawable.f1};
     private Object LayoutInflater;
 
     public viewPAgeAdapteer(Context context) {
